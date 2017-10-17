@@ -26,9 +26,10 @@ int main()
                 {
                         for(int col = 0; col < bmp[0].size(); col ++)
                         {
-                                rgb.red = 0;
-                                rgb.blue = 0;
-                                rgb.green = 0;
+                                int avg = (rgb.red + rgb.blue + rgb.green)/3;
+                                rgb.red = avg;
+                                rgb.blue = avg;
+                                rgb.green = avg;
 
                                 bmp[row][col] = rgb;
                         }
