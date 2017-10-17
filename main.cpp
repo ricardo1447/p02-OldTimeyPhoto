@@ -11,7 +11,12 @@ int main()
     vector < vector < Pixel > > bmp;
     Pixel rgb;
 
+    string input;
     cout << "Please state the file name of an image: " << endl;
+    cin >> input;
+
+    image.open(input);
+
     bool validBmp = image.isImage();
     if(validBmp == true)
     {
@@ -21,10 +26,9 @@ int main()
     rgb.blue = 0;
     rgb.green = 0;
     
-    bmp[532][2486] = rgb;
+    bmp[bmp.size() - 1][bmp[0].size() - 1] = rgb;
     image.fromPixelMatrix(bmp);
     image.save("machupicchu.bmp");
-    "machupicchu.bmp" == "oldtimey.bmp";
     }
     return 0;
 
